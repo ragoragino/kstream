@@ -1,0 +1,17 @@
+ADD_EXECUTABLE(imctest 
+    main.cpp
+    GameTest.cpp
+    ConcurrentQueueTest.cpp
+)
+TARGET_COMPILE_FEATURES(imctest PRIVATE cxx_std_17)
+TARGET_INCLUDE_DIRECTORIES(imctest PRIVATE ${GTEST_INCLUDE_DIRS})
+TARGET_INCLUDE_DIRECTORIES(imctest PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+TARGET_INCLUDE_DIRECTORIES(imctest PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/../src)
+TARGET_LINK_LIBRARIES(imctest PRIVATE GTest::gtest 
+    GTest::gmock
+)
+
+ADD_TEST(
+    NAME imctest
+    COMMAND imctest
+)
