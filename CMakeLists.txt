@@ -3,7 +3,7 @@ PROJECT(kstream)
 
 SET(CPP_STANDARD 20)
 
-SET(CMAKE_CXX_FLAGS "-std=c++1z -Wall -Wextra -Werror -g")
+SET(CMAKE_CXX_FLAGS "--std=c++20 -Wall -Wextra -Werror -g")
 
 INCLUDE(${CMAKE_BINARY_DIR}/conanbuildinfo.cmake)
 CONAN_BASIC_SETUP()

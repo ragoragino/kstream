@@ -8,7 +8,10 @@ fi
 
 cd build
 
+export CXX=/usr/bin/g++-10
+
 conan install .. \
+      -pr=profile \
       --install-folder . \
       --build=missing
       
